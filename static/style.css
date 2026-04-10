@@ -9,14 +9,50 @@ body{
     padding: 0;
 }
 
-.header{
-    background: var(--light_bg);
-    padding: 10px;
-}
-
-.header_menu{
+.header__logo img{
+    float: left;
     display: block;
 }
+
+
+
+.header__menu{
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+
+.header__menu__item{
+    display: inline-block;
+}
+
+.header__menu__item a{
+    color: #fff;
+    display: block;
+    padding: 25px;
+}
+
+.header__menu__item a:hover{
+    background: var(--light_bg);
+    color: var(--dark_bg);
+}
+
+
+.header__icon-bar{
+    display: block;
+    float: right;
+    padding: 15px;
+    display: none;
+}
+
+.header__icon-bar span{
+    display: block;
+    height: 3px;
+    width: 30px;
+    background: var(--light_bg);
+    margin-bottom: 5px;
+}
+
 
 .footer{
     width: 100%;
