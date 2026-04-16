@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
-    <title>{% block title %}Portfolio{% endblock %}</title>
+    <title>Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -14,30 +14,110 @@
 </head>
 
 <body>
-    <header class="header">
-        <a class="header_logo"><img src="" alt=""></a>
-        <div class="header_icon-bar">
+    <div class="header clearfix">
+        <a href="" class="header__logo"><img src="static/img/logo/Screenshot_2025-08-06_alle_14.02.45-removebg-preview.png" alt=""></a>
+        <a href="" class="header__icon-bar">
             <span></span>
             <span></span>
             <span></span>
-        </div>
-        <ul class="header_menu">
-            <li class="header_menu_item"><a href="">Home</a></li>
-            <li class="header_menu_item"><a href="">About</a></li>
-            <li class="header_menu_item"><a href="">Contact us</a></li>
-            <li class="header_menu_item"><a href="">Newsletter</a></li>
+        </a>
+        <ul class="header__menu animate">
+            <li class="header__menu__item"><a href="index.html">Home</a></li>
+            <li class="header__menu__item"><a href="login.html">Login</a></li>
+            <li class="header__menu__item"><a href="register.html">Register</a></li>
+            <li class="header__menu__item"><a href="Videos.html">Videos</a></li>
+            <li class="header__menu__item"><a href="about.html">About us</a></li>
+            <li class="header__menu__item"><a href="contact.html">Contact Us</a></li>
         </ul>
-    </header>
+    </div>
+
+
     <div class="cover">
-        {% block cover %}{% endblock %}
+        <div class="cover__filter"></div>
+        <div class="cover__caption">
+            <div class="cover__caption__copy">
+                <h1>messaggio home</h1>
+                <h2>sottotilo messaggio</h2>
+                <a href="/html/" class="btn">Bottone simpatico</a>
+            </div>
+        </div>
     </div>
-    <div class="banner">
-        {% block banner %}{% endblock %}
+
+    <div class="cards clearfix">
+        <div class="card">
+            
+            <div class="bg__img">
+                <img class="card__image__img ml" src="/static/img/cards/Mattia.webp" alt=":( sorry no image">
+            </div>
+            
+            <div class="card__copy">
+                <h3>Mattia, Alias Gian_Matty</h3>
+                <p>Web developer <br>Favourite programming languages: <ul>
+                    <li>Html</li>
+                    <li>Css</li>
+                    <li>Python</li>
+                </ul></p>
+            </div>
+        </div>
+
+        <div class="card">
+            
+            <div class="bg__img">
+                <img class="card__image__img ml" src="/static/img/cards/Diego.jpg" alt=":( sorry no image">
+            </div>
+            
+            <div class="card__copy">
+                <h3>Diego, Alias Hard_Disk_011</h3>
+                <p>Nerd, always following courses like cs50x <br>favourite programming language:<ul>
+                    <li>C</li>
+                    <li>Python</li>
+                </ul></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="bg__img">
+                <img class="card__image__img cento" src="/static/img/cards/samu.png" alt=":( sorry no image">
+            </div>
+            <div class="card__copy">
+                <h3>Samuele, Alias Nessuno2314</h3>
+                <p>Even he doesn't know what he can do, alweys learing something new<br>favourite programming language:<ul>
+                    <li>Python</li>
+                </ul></p>
+            </div>
+        </div>
     </div>
-    <footer class="footer">
-        {% block footer %}{% endblock %}
-    </footer>
+
+    <div class="banner clearfix">
+
+        <div class="banner__image"></div>
+
+        <div class="banner__copy">
+
+            <div class="banner__copy__text">
+                <h3>CraftCore's Social</h3>
+                <p>There are all the ours social media channel, go follow us!</p>
+                <p> <i class='bx  bxl-whatsapp'     ></i> <a href="https://whatsapp.com/channel/0029Vb67zGFB4hdQKtA09J3j">Whatsapp</a></p>
+
+                <p> <i class="bx  bxl-instagram"    ></i> <a href="https://www.instagram.com/craftcore.official/">instagram</a></p>
+
+                <p> <i class='bx  bxl-twitch'       ></i> <a href="https://www.twitch.tv/hard_disk_011">Twitch</a></p>
+
+                <p> <i class='bx  bxl-reddit'       ></i> <a href="#">Reddit</a></p>
+
+                <p> <i class='bx  bxl-discord-alt'  ></i> <a href="https://discord.gg/Jgf6CHn7">Discord</a></p>
+
+                <p> <i class="bx  bxl-github"       ></i> <a href="#">Github</a></p>
+
+            </div>
+            
+        </div>
+
+    </div>
+
+    <div class="footer mt">
+        <p>Copyright 2026 - CraftCore - Gian_Matty - Nessuno2314 - Hard_Disk_011 - <i class='bx bxl-whatsapp'  ></i>  <i class="bx bxl-instagram"></i>  <i class='bx  bxl-twitch'  ></i> <i class='bx  bxl-reddit'  ></i> <i class="bx bxl-discord-alt"></i> <i class="bx bxl-github"></i></p>
+    </div>
 
 </body>
-
 </html>
